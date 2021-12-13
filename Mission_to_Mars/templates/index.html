@@ -15,8 +15,8 @@
   <div class="container">
 
     <div class="jumbotron text-center">
-      <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button"></a>Scrape New Data</p>
+      <h1 class="font-weight-bold">Mission to Mars</h1>
+      <p><a class="btn btn-danger btn-lg btn-block" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
 
     <!-- mars data -->
@@ -30,66 +30,72 @@
 
     <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h4>display new title</h4>
-            <p>and paragraph</p>
+          <div class="col-12 bg-light">
+            <h4>{{mars_data.news_title}}</h4>
+            <p>{{mars_data.news_p}}</p>
           </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container pt-5">
         <div class="row">
-          <div class="col-lg-6 col-md-12">
-           <h3>Featured mars Image</h3> 
-           <img src="feature image" alt="mars">
+          <div class="col-lg-8 col-md-12 d-flex justify-content-between bg-light border-danger">
+           <h3>Featured Mars Image</h3>
           </div>
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-4 col-md-12 d-flex justify-content-between">
             <h4>Mars Facts</h4>  
-            <table>display fact table</table>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-lg-8 col-md-12 d-flex justify-content-between bg-light border-danger"> 
+           <img src="{{mars_data.feature_img_url}}" alt="mars">
+          </div>
+          <div class="col-lg-4 col-md-12 d-flex justify-content-between"> 
+            <table class="table table-striped">{{mars_data.fact_html_table}}</table>
           </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container pt-5">
         <div class="row">
           <div class="col-12">
-            <h3>Mars Hemispheres</h3>
+            <h3 class="text-center">Mars Hemispheres</h3>
+            <hr>
           </div>
         </div>
     </div>
-
-
     <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-between">
+            <div class="card bg-light border-danger" style="width: 18rem;">
+                <img class="card-img-top" src="{{mars_data.cerberus_url}}" alt="cerberus">
                 <div class="card-body">
-                  <p class="card-text">H1 label</p>
+                  <p class="card-text">{{mars_data.cerberus_title}}</p>
                 </div>
               </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-between">
+            <div class="card bg-light border-danger" style="width: 18rem;">
+                <img class="card-img-top" src="{{mars_data.schiaparelli_url}}" alt="schiaparelli">
                 <div class="card-body">
-                  <p class="card-text">H2 label</p>
+                  <p class="card-text">{{mars_data.schiaparelli_title}}</p>
                 </div>
               </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-between">
+            <div class="card bg-light border-danger" style="width: 18rem;">
+                <img class="card-img-top" src="{{mars_data.syrtis_major_url}}" alt="syrtis_major">
                 <div class="card-body">
-                  <p class="card-text">H3 label</p>
+                  <p class="card-text">{{mars_data.syrtis_major_title}}</p>
                 </div>
               </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-between">
+            <div class="card bg-light border-danger" style="width: 18rem;">
+                <img class="card-img-top" src="{{mars_data.valles_marineris_url}}" alt="valles_marineris">
                 <div class="card-body">
-                  <p class="card-text">H4 label</p>
+                  <p class="card-text">{{mars_data.valles_marineris_title}}</p>
                 </div>
               </div>
           </div>
